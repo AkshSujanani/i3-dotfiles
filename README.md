@@ -1,2 +1,2 @@
 # i3-dotfiles
-Dotfiles for sway enviornment
+Dotfiles for i3-wm enviornment
