@@ -177,5 +177,6 @@ bar {
         status_command i3status
 }
 
-#exec --no-startup-id feh --bg-scale ~/Pictures/wallhaven-9mjw78.png
+exec --no-startup-id feh --bg-scale ~/Pictures/minimal_landscape.jpg
 #exec --no-startup-id variety
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
