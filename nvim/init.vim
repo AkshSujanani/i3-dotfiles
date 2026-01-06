@@ -12,6 +12,7 @@ Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'} 
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -27,6 +28,7 @@ set incsearch
 set smartcase
 set ruler
 set wildmenu
+set scrolloff=999
 colorscheme carbonfox 
 
 
@@ -52,3 +54,9 @@ require("nvim-treesitter.configs").setup({
 })
 EOF
 
+""""""""""""""""""""""""""""""""""""""""""""""
+"		NERDTREE		     "
+""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

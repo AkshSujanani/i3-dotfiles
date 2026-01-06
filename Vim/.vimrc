@@ -10,6 +10,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -25,6 +26,8 @@ set incsearch
 set smartcase
 set ruler
 set wildmenu
+set scrolloff=999
+set encoding=UTF-8
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -33,7 +36,13 @@ set wildmenu
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'murmur'
-
 hi CocFloating ctermbg=black  "Floating menu bg color
 hi CocMenuSel ctermbg=darkgrey       "Menu selection bg color
 hi CocSearch ctermfg=blue        "Text color of the matching text
+
+""""""""""""""""""""""""""""""""""""""""""""""
+"		NERDTREE		     "
+""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
