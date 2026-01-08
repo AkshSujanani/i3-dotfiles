@@ -4,11 +4,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'EdenEast/nightfox.nvim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'} 
@@ -20,7 +21,8 @@ call plug#end()
 "		BUILTINS                     "
 """"""""""""""""""""""""""""""""""""""""""""""
 set relativenumber
-syntax on
+set termguicolors
+syntax enable
 set autoindent
 set smartindent
 set hlsearch
@@ -29,7 +31,7 @@ set smartcase
 set ruler
 set wildmenu
 set scrolloff=999
-colorscheme carbonfox 
+colorscheme tokyonight-night 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -37,7 +39,7 @@ colorscheme carbonfox
 """"""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'deus'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -45,7 +47,7 @@ let g:airline_theme = 'murmur'
 """"""""""""""""""""""""""""""""""""""""""""""
 lua << EOF
 require("nvim-treesitter.configs").setup({
-    ensure_installed = { "javascript", "c", "lua", "vim", "json", "html", "cpp", "bash" },
+    ensure_installed = { "javascript", "c", "lua", "vim", "json", "html", "cpp", "bash" , "css"},
     sync_install = false,
     auto_install = true,
     highlight = {
@@ -60,3 +62,5 @@ EOF
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+lua require'colorizer'.setup()
