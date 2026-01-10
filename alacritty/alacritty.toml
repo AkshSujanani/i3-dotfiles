@@ -31,10 +31,10 @@ osc52 = "CopyPaste"
 [mouse]
 hide_when_typing = true
 
-[keyboard]
-bindings = [
-{key = "v", mods = "Control", action = "Paste"},
-{key = "c", mods = "Control", action = "Copy"},
-{key = "N", mods = "Control|Shift", action = "CreateNewWindow"},
-{key = "F", mods = "Control|Shift", action = "ToggleFullscreen"}
-]
+#[keyboard]
+#bindings = [
+#{key = "v", mods = "Control", action = "Paste"},
+#{key = "c", mods = "Control", action = "Copy"},
+#{key = "N", mods = "Control|Shift", action = "CreateNewWindow"},
+#{key = "F", mods = "Control|Shift", action = "ToggleFullscreen"}
+#]
