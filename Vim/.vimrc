@@ -29,6 +29,7 @@ set ruler
 set wildmenu
 set scrolloff=999
 set encoding=UTF-8
+set background=light
 
 
 """"""""""""""""""""""""""""""""""""""""""""""
