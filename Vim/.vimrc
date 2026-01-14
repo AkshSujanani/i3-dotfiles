@@ -18,6 +18,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""
 "		BUILTINS                     "
 """"""""""""""""""""""""""""""""""""""""""""""
+set number
 set relativenumber
 syntax on
 set autoindent
