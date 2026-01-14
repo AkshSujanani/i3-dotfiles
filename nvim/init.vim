@@ -21,6 +21,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""
 "		BUILTINS                     "
 """"""""""""""""""""""""""""""""""""""""""""""
+set number
 set relativenumber
 set termguicolors
 syntax enable
