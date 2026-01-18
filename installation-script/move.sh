@@ -10,6 +10,6 @@ cp -r nvim ~/.config/
 cp -r picom ~/.config/
 cp -r rofi ~/.config/
 cp -r Starship/* ~/.config/
-cp -r tmux/* ~/
-cp -r vim/* ~/
+cp -r tmux/.tmux.conf ~/
+cp -r Vim/* ~/
 cp -r Wallpapers ~/Pictures/
