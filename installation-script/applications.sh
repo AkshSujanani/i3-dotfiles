@@ -4,8 +4,8 @@ echo "Installing Packages........"
 sleep 5
 if [ -x "$(command -v apt-get)" ]; then
 	sudo apt update
-	yes|sudo apt install vim clangd picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
-	yes| sudo apt-get install ninja-build gettext cmake curl build-essential git
+	sudo apt install -y vim clangd picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
+	sudo apt-get install -y ninja-build gettext cmake curl build-essential git
 	(
 		cd ~/
 		git clone https://github.com/neovim/neovim
@@ -14,12 +14,12 @@ if [ -x "$(command -v apt-get)" ]; then
 		sudo make install
 		)
 elif [ -x "$(command -v pacman)" ]; then
-	sudo pacman -Sy
-	yes|sudo pacman -S vim clangd picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
-	read -pr "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
+	sudo pacman --noconfirm -Sy
+	sudo pacman --noconfirm -S vim clangd picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
+	read -r -p "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
 	if [[ $choice = "y" ]]; then
 		(
-			yes|sudo pacman -S ninja-build gettext cmake curl build-essential git
+			sudo pacman --noconfirm -S --needed ninja-build msgpack lua ncurses python libuv cmake curl base-devel git
 			cd ~/
 			git clone https://github.com/neovim/neovim
 			cd neovim
@@ -28,10 +28,11 @@ elif [ -x "$(command -v pacman)" ]; then
 		)
 	else
 		yes|sudo pacman -S neovim
+	fi
 elif [ -x "$(command -v zypper)" ]; then
 	sudo zypper patch
-	yes|sudo zypper install vim vim-data clangd picom rofi feh flameshot alacritty fastfetch ghostty i3 nodejs npm bat
-	read -pr "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
+	yes | sudo zypper install vim vim-data clangd picom rofi feh flameshot alacritty fastfetch ghostty i3 nodejs npm bat
+	read -r -p "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
 	if [[ $choice = "y" ]]; then
 		(
 			yes|sudo zypper install ninja-build gettext cmake curl build-essential git
@@ -43,5 +44,6 @@ elif [ -x "$(command -v zypper)" ]; then
 		)
 	else
 		yes|sudo zypper install neovim
+	fi
 
 fi
