@@ -6,3 +6,11 @@
 5. Feh
 6. Picom
 7. nodejs
+
+**Setup script**
+```bash
+
+git clone https://github.com/AkshSujanani/dotfiles.git && cd dotfiles\
+&& chmod +x setup.sh && ./setup.sh
+
+```
