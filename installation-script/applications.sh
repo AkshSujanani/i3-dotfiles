@@ -15,7 +15,7 @@ if [ -x "$(command -v apt-get)" ]; then
 		)
 elif [ -x "$(command -v pacman)" ]; then
 	sudo pacman --noconfirm -Sy
-	sudo pacman --noconfirm -S vim clangd picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
+	sudo pacman --noconfirm -S vim clang picom rofi feh flameshot alacritty ghostty fastfetch i3 nodejs npm bat
 	read -r -p "Do you want to buid neovim from source? (yes->y or any other key->no): " choice
 	if [[ $choice = "y" ]]; then
 		(
