@@ -15,6 +15,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'} 
 Plug 'ryanoasis/vim-devicons'
+Plug 'kdheepak/lazygit.nvim'
 call plug#end()
 
 
@@ -33,6 +34,8 @@ set smartcase
 set ruler
 set wildmenu
 set scrolloff=999
+set termguicolors
+set clipboard+=unnamedplus
 colorscheme tokyonight-night 
 
 
@@ -65,4 +68,11 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""
 lua require'colorizer'.setup()
+""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""
+"		LAZYGIT			     "
+""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-l> :LazyGit<CR>
