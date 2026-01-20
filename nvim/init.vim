@@ -16,6 +16,7 @@ Plug 'tpope/vim-unimpaired'	"Keymappings prebuild
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master'} 
 Plug 'ryanoasis/vim-devicons'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 
@@ -35,7 +36,6 @@ set ruler
 set wildmenu
 set scrolloff=999
 set termguicolors
-set clipboard+=unnamedplus
 colorscheme tokyonight-night 
 
 
@@ -76,3 +76,19 @@ lua require'colorizer'.setup()
 "		LAZYGIT			     "
 """"""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-l> :LazyGit<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+"		Indentline		     "
+""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+require("ibl").setup {
+  indent = {
+    char = "│",
+  },
+  scope = {
+    enabled = true,
+    show_start = false,
+    show_end = false,
+  }
+}
+EOF
