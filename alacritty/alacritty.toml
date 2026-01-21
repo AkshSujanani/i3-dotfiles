@@ -1,6 +1,6 @@
 [general]
 import = [
-	"~/.config/alacritty/themes/tokyo_night_enhanced.toml",
+	"~/.config/alacritty/themes/tokyo_night.toml",
 ]
 live_config_reload = true
 
@@ -15,7 +15,7 @@ multiplier = 5
 
 [font]
 normal = {family = "Literation Mono Nerd Font" }
-size = 12
+size = 13
 
 [selection]
 save_to_clipboard = true
