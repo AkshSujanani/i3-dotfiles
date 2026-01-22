@@ -29,6 +29,7 @@ set termguicolors
 syntax enable
 set autoindent
 set smartindent
+set guicursor=n-v-c-i:block
 set hlsearch
 set incsearch
 set smartcase
